@@ -1,0 +1,10 @@
+version: '2'
+services:
+  builder:
+    image: "espressif/idf:v4.0.2"
+    working_dir: /app
+    volumes:
+      - .:/app 
+    command: /bin/bash -c "cd src && make"
+
+
